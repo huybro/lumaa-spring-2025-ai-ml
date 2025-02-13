@@ -1,6 +1,6 @@
 # AI/Machine Learning Intern Challenge: Simple Content-Based Recommendation
 
-**Deadline**: Sunday, Feb 16th 11:59 pm PST
+**Deadline**: Friday, Feb 21th 11:59 pm PST
 
 ---
 
@@ -57,6 +57,7 @@ Build a **content-based recommendation system** that, given a **short text descr
    - Convert text data to vectors (e.g., TF-IDF).  
    - Implement a function to compute similarity between the user’s query and each item’s description.  
    - Return the top matches.
+   - Salary expectation per month (Mandatory)
 
 3. **Short Video Demo**  
    - In a `.md` file (e.g., `demo.md`) within your fork, paste a link to a **brief screen recording** (video link).  
@@ -65,7 +66,7 @@ Build a **content-based recommendation system** that, given a **short text descr
      - A sample query and the results.
 
 4. **Deadline**  
-   - Submit your fork by **Sunday, Feb 16th 11:59 pm PST**.
+   - Submit your fork by **Friday, Feb 21th 11:59 pm PST**.
 
 > **Note**: This should be doable within ~3 hours. Keep it **straightforward**—you do **not** need advanced neural networks or complex pipelines. A simple TF-IDF + cosine similarity approach is sufficient.
 
