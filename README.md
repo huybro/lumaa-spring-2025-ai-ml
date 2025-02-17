@@ -1,6 +1,6 @@
 # AI/Machine Learning Intern Challenge: Simple Content-Based Recommendation
 
-**Deadline**: Friday, Feb 21th 11:59 pm PST
+**Deadline**: Sunday, Feb 23th 11:59 pm PST
 
 ---
 
@@ -66,7 +66,7 @@ Build a **content-based recommendation system** that, given a **short text descr
      - A sample query and the results.
 
 4. **Deadline**  
-   - Submit your fork by **Friday, Feb 21th 11:59 pm PST**.
+   - Submit your fork by **Sunday, Feb 23th 11:59 pm PST**.
 
 > **Note**: This should be doable within ~3 hours. Keep it **straightforward**—you do **not** need advanced neural networks or complex pipelines. A simple TF-IDF + cosine similarity approach is sufficient.
 
