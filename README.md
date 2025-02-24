@@ -1,91 +1,86 @@
-# AI/Machine Learning Intern Challenge: Simple Content-Based Recommendation
+# Movie Recommendation System
 
-**Deadline**: Sunday, Feb 23th 11:59 pm PST
-
----
-
-## Overview
-
-Build a **content-based recommendation system** that, given a **short text description** of a user’s preferences, suggests **similar items** (e.g., movies) from a small dataset. This challenge should take about **3 hours**, so keep your solution **simple** yet **functional**.
-
-### Example Use Case
-
-- The user inputs:  
-  *"I love thrilling action movies set in space, with a comedic twist."*  
-- Your system processes this description (query) and compares it to a dataset of items (e.g., movies with their plot summaries or keywords).  
-- You then return the **top 3–5 “closest” matches** to the user.
+This project implements a **content-based movie recommendation system** using TF-IDF and cosine similarity. Given a user's query (e.g., "I like action movies set in space"), the system recommends the top N most similar movies based on their plot summaries, genres, and keywords.
 
 ---
 
-## Requirements
-
-1. **Dataset**  
-   - Use a **small** public dataset of items (e.g., a list of movies with plot summaries, or other textual descriptions).  
-   - Make sure the dataset is easy to handle (maybe 100–500 rows) so the solution remains quick to implement and run.  
-   - Include the dataset in your forked repository *or* provide instructions/link on how to download it.  
-
-2. **Approach**  
-   - **Content-Based**: At a minimum, use text similarity to recommend items.  
-     - For instance, you can transform both the user’s text input and each item’s description into TF-IDF vectors and compute **cosine similarity**.  
-   - Return the **top N** similar items (e.g., top 5).
-
-3. **Code Organization**  
-   - You may use a **Jupyter Notebook** or **Python scripts**.  
-   - Keep it **readable** and **modular** (e.g., one section for loading data, one for building vectors, one for computing similarity, etc.).  
-   - Briefly comment or docstring your key functions/sections.
-
-4. **Output**  
-   - When given an input description (e.g., `"I like action movies set in space"`), your system should print or return a list of recommended items (e.g., 3–5 titles).  
-   - Include the similarity score or rank if you’d like.
-
-5. **Summary & Instructions**  
-   - A short `README.md` that includes:
-     - **Dataset**: Where it’s from, any steps to load it.  
-     - **Setup**: Python version, virtual environment instructions, and how to install dependencies (`pip install -r requirements.txt`).  
-     - **Running**: How to run your code (e.g., `python recommend.py "Some user description"` or open your notebook in Jupyter).  
-     - **Results**: A brief example of your system’s output for a sample query.
+## **Features**
+- **Content-Based Filtering**: Uses TF-IDF to vectorize movie descriptions and cosine similarity to find similar movies.
+- **Customizable**: Easily adjust the number of recommendations (`top_n`).
+- **Simple and Lightweight**: Built with Python and minimal dependencies.
 
 ---
 
-## Deliverables
+## **Dataset**
+The dataset used is a subset of **The Movies Dataset** from [Kaggle](https://www.kaggle.com/datasets/rounakbanik/the-movies-dataset). It contains the following columns:
+- `id`: Unique identifier for each movie.
+- `title`: Title of the movie.
+- `genres`: Genres associated with the movie.
+- `keywords`: Keywords describing the movie.
+- `combined_features`: A combination of `genres` and `keywords` used for recommendations.
 
-1. **Fork the Public Repository**  
-   - **Fork** this repo into your own GitHub account.
-
-2. **Implement Your Solution**  
-   - Load and preprocess your dataset (e.g., read CSV, handle text columns).  
-   - Convert text data to vectors (e.g., TF-IDF).  
-   - Implement a function to compute similarity between the user’s query and each item’s description.  
-   - Return the top matches.
-   - Salary expectation per month (Mandatory)
-
-3. **Short Video Demo**  
-   - In a `.md` file (e.g., `demo.md`) within your fork, paste a link to a **brief screen recording** (video link).  
-   - Demonstrate:
-     - How you run the recommendation code.  
-     - A sample query and the results.
-
-4. **Deadline**  
-   - Submit your fork by **Sunday, Feb 23th 11:59 pm PST**.
-
-> **Note**: This should be doable within ~3 hours. Keep it **straightforward**—you do **not** need advanced neural networks or complex pipelines. A simple TF-IDF + cosine similarity approach is sufficient.
+### **Dataset Source**
+- **Name**: The Movies Dataset
+- **Source**: [Kaggle](https://www.kaggle.com/datasets/rounakbanik/the-movies-dataset)
+- **Description**: A large dataset containing metadata for over 45,000 movies. For this project, a smaller subset (`processed_movies_simple.csv`) is used for simplicity.
 
 ---
 
-## Evaluation Criteria
+## **Setup**
 
-1. **Functionality**  
-   - Does your code run without errors?  
-   - When given an input query, does it successfully output relevant items?
+### **Prerequisites**
+- Python 3.8 or higher.
+- Required Python libraries: `pandas`, `numpy`.
 
-2. **Code Quality**  
-   - Clear, commented code (where it counts).  
-   - Logical steps (load data → transform → recommend).
+### **Install Dependencies**
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/movie-recommendation-system.git
+   cd movie-recommendation-system
 
-3. **Clarity**  
-   - Is your `README.md` straightforward about setup, how to run, and what to expect?
+2. Create a virtual environment:
+    python -m venv venv
 
-4. **ML/Recommendation Understanding**  
-   - Basic implementation of a content-based recommendation approach (vectorization, similarity measure).
+3. Activate the virtual environment:
+    source venv/bin/activate
+4. Install the required libraries:
+    pip install -r requirements.txt
 
-**We look forward to seeing your solution!** Good luck!
+## **Running the Code**
+Run the script with a user query as a command-line argument:
+python3 recommend.py "Japanese avtion movies"
+
+Example Output
+For the query "Japanese avtion movies", the output might look like this:
+Top Movie Recommendations:
+--------------------------------------------------
+
+1. Behind the Rising Sun
+Similarity Score: 0.8307
+
+2. The Most Beautiful Night In The World
+Similarity Score: 0.8240
+
+3. Crows Explode
+Similarity Score: 0.7976
+
+4. The Great Passage
+Similarity Score: 0.7935
+
+5. Japan's Longest Day
+Similarity Score: 0.7240
+
+6. Snakes and Earrings
+Similarity Score: 0.6931
+
+7. Early Spring
+Similarity Score: 0.6809
+
+8. Take Aim at the Police Van
+Similarity Score: 0.6785
+
+9. I Am Waiting
+Similarity Score: 0.6705
+
+10. The Kingdom of Dreams and Madness
+Similarity Score: 0.6684
