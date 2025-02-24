@@ -25,6 +25,8 @@ The dataset used is a subset of **The Movies Dataset** from [Kaggle](https://www
 - **Description**: A large dataset containing metadata for over 45,000 movies. For this project, a smaller subset (`processed_movies_simple.csv`) is used for simplicity.
 
 ---
+# **Salary Expectation**
+30$ per hour
 
 ## **Setup**
 
